@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
+const config = require('./config.json');
 require('dotenv').config();
-
-const prefix = "~";
 
 const client = new Discord.Client();
 
@@ -27,10 +26,10 @@ client.on('ready', () => {
 
 client.on('message', (msg) => {
     //Exit early if message was not a command
-    if (!msg.content.startsWith(prefix) || msg.author.bot) return;
+    if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
 
     //extract the command and its arguments
-    const args = msg.content.slice(prefix.length).trim().split(/ +/);
+    const args = msg.content.slice(config.prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
 
     //exit early if command is invalid
@@ -44,7 +43,7 @@ client.on('message', (msg) => {
 
         //if the correct usage is established, let the user know
         if (command.usage) {
-            botReply += "\nThe proper usage would be  \`${prefix}${command.name} ${command.usage}\'";
+            botReply += "\nThe proper usage would be  \`${config.prefix}${command.name} ${command.usage}\'";
         }
 
         return msg.channel.reply(botReply);
