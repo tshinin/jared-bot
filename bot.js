@@ -43,10 +43,10 @@ client.on('message', (msg) => {
 
         //if the correct usage is established, let the user know
         if (command.usage) {
-            botReply += "\nThe proper usage would be  \`${config.prefix}${command.name} ${command.usage}\'";
+            botReply += `\nThe proper usage would be  \`${command.usage}\'`;
         }
 
-        return msg.channel.reply(botReply);
+        return msg.reply(botReply);
     }
 
     //If a command is not accounted for in the cooldowns collection, include it
