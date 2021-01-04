@@ -5,6 +5,8 @@ require('dotenv').config();
 
 const client = new Discord.Client();
 
+exports.queue = new Discord.Collection();
+
 //Create a new collection for all of the bots commands 
 client.commands = new Discord.Collection();
 
@@ -22,6 +24,12 @@ const cooldowns = new Discord.Collection();
 
 client.on('ready', () => {
     console.log("ready!");
+});
+client.once('reconnecting', () => {
+    console.log('Reconnecting!');
+});
+client.once('disconnect', () => {
+    console.log('Disconnect!');
 });
 
 client.on('message', (msg) => {
@@ -83,3 +91,5 @@ client.on('message', (msg) => {
 });
 
 client.login(process.env.TOKEN);
+
+
