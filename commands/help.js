@@ -3,6 +3,7 @@ const config = require('../config.json');
 module.exports = {
 	name: 'help',
     description: 'List all of the commands or info regarding a specific command',
+    usage: `${config.prefix}help OR ${config.prefix}help [someCommand]`,
     cooldown: 5,
 	execute(message, args) {
         const data = [];
