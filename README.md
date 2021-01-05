@@ -22,10 +22,4 @@ NOTE: Using `~play` multiple times will put your songs in queue. You can use the
 
 ## Adding Jared to Your Server
 
-Thanks for showing interest in Jared! To add him to your server, simply use the link below:
-
-[Add Jared to Your Server](https://discord.come/oauth2/authorize?client_id=792812878381318145&scope=bot)
-
-Be nice to Jared and give him a moderator role so both his current and future features work as intented.
-
-As Jared is early in his development, he does not have his own website (yet!). Please stay tuned for that!
+Thanks for showing interest in Jared! Unfortunately he is currently not deployed on the internet and will not run in a cloned repository due to the .env file not being pushed for security reasons. Stay tuned for when he is deployed as these instructions will be updated accordingly.
