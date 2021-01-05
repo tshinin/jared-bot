@@ -6,13 +6,13 @@ Jared is a passion project that is in active development and will receive featur
 
 ## Easy to Use and Intuitive
 
-Jared is built for people that with little to no experience in programming, and is consequently intended to be very easy to use. Here is an example!
+Jared is built for people with little to no experience in programming, and is consequently intended to be very easy to use. Here is an example!
 
 ### How to Play Music with Jared
 
 1. Join a voice call.
 
-2. Find the youtube link of the song you want to listen to (for the sake of example we will use <https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO>.
+2. Find the youtube link of the song you want to listen to (for the sake of example we will use <https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO>).
 
 3. In your preferred channel, type `~play https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO`
 
@@ -22,7 +22,7 @@ NOTE: Using `~play` multiple times will put your songs in queue. You can use the
 
 ## Adding Jared to Your Server
 
-Thanks for showing interest in Jared! To add him to your server, simply use the link below
+Thanks for showing interest in Jared! To add him to your server, simply use the link below:
 
 [Add Jared to Your Server](https://discord.come/oauth2/authorize?client_id=792812878381318145&scope=bot)
 
