@@ -1,11 +1,11 @@
-const config = require('../config.json');
+require('dotenv').config();
 const fetch = require('node-fetch');
 
 module.exports = {
 	name: 'gif',
 	args: true,
     description: 'Search for a gif of your choosing!',
-    usage: `${config.prefix}gif [search terms]`,
+    usage: `${process.env.PREFIX}gif [search terms]`,
     cooldown: 5,
 	async execute(message, args) {
         let keywords = args;

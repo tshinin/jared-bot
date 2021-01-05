@@ -1,9 +1,9 @@
-const config = require('../config.json');
+require('dotenv').config();
 
 module.exports = {
 	name: 'help',
     description: 'List all of the commands or info regarding a specific command',
-    usage: `${config.prefix}help OR ${config.prefix}help [someCommand]`,
+    usage: `${process.env.PREFIX}help OR ${process.env.PREFIX}help [someCommand]`,
     cooldown: 5,
 	execute(message, args) {
         const data = [];
@@ -13,7 +13,7 @@ module.exports = {
         if (!args.length) {
             data.push("Here are all my commands!");
             data.push(commands.map(command => command.name).join(', '));
-            data.push(`\nYou can use \'${config.prefix}help [command name]\' to get help for a specific command`);
+            data.push(`\nYou can use \'${process.env.PREFIX}help [command name]\' to get help for a specific command`);
 
             return message.channel.send(data, {split: true})
             .catch (error => {

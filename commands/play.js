@@ -1,13 +1,13 @@
 const ytdl = require('ytdl-core');
 const {queue} = require('../bot.js');
-const config = require('../config.json');
+require('dotenv').config();
 
 module.exports = {
 	name: 'play',
 	args: true,
     description: 'Play ',
     cooldown: 5,
-    usage: `${config.prefix}play [youtube url]`,
+    usage: `${process.env.PREFIX}play [youtube url]`,
 	async execute(message, args) {
         const contract = queue.get(message.guild.id);
         const voiceChannel = message.member.voice.channel;

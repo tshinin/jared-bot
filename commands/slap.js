@@ -1,11 +1,11 @@
-const config = require('../config.json');
+require('dotenv').config();
 const fetch = require('node-fetch');
 
 module.exports = {
 	name: 'slap',
 	args: true,
     description: '@ someone to slap them.',
-    usage: `${config.prefix}slap @someuser`,
+    usage: `${process.env.PREFIX}slap @someuser`,
     cooldown: 5,
 	async execute(message, args) {
         let keywords = "slap";

@@ -1,10 +1,10 @@
-const config = require('../config.json');
+require('dotenv').config();
 
 module.exports = {
 	name: 'choose',
 	args: true,
     description: 'Get the bot to choose between multiple options, must give at least two',
-    usage: `${config.prefix}choose option 1 | option 2 | ... | option N`,
+    usage: `${process.env.PREFIX}choose option 1 | option 2 | ... | option N`,
     cooldown: 5,
 	execute(message, args) {
         //split the arguments by the '|' character and trim each element

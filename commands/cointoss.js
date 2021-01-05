@@ -1,10 +1,10 @@
-const config = require('../config.json');
+require('dotenv').config();
 
 module.exports = {
 	name: 'cointoss',
 	args: false,
     description: 'Get the bot to flip a coin!',
-    usage: `${config.prefix}cointoss`,
+    usage: `${process.env.PREFIX}cointoss`,
     cooldown: 5,
 	execute(message, args) {
         const options = ["heads", "tails"];
