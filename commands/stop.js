@@ -1,8 +1,8 @@
 const {queue} = require('../bot.js');
 
 module.exports = {
-	name: 'stop',
-	args: false,
+	  name: 'stop',
+	  args: false,
     description: 'Stop the song currently playing',
     cooldown: 5,
 	execute(message, args) {
